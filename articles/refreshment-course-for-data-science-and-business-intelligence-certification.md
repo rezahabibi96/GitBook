@@ -73,16 +73,15 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 
 
-    <details>
-    <summary>Show/Hide</summary>
-
+<details>
+<summary>Show/Hide</summary>
 ```python
 import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/data/refreshment-course-for-data-science%20and-business-intelligence-certification/telco.csv')
 df.sample(10)
 ```
 
-    </details>
+</details>
 
 
 
@@ -380,7 +379,6 @@ df.sample(10)
 
 
 
-
 ```python
 from ydata_profiling import ProfileReport
 profile = ProfileReport(df, title="Profiling Report")
@@ -392,7 +390,6 @@ profile.to_notebook_iframe()
 ![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/assets/refreshment-course-for-data-science%20and-business-intelligence-certification/profiling_report.jpeg)
 
 ### Data Preprocessing
-
 
 
 
@@ -432,7 +429,6 @@ y = LabelEncoder().fit_transform(df['Churn'])
 
 
 
-
 ```python
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
@@ -462,7 +458,6 @@ print(classification_report(y_test, y_pred))
 ### Low Code Machine Learning with PyCaret
 
 As we can see in the Data Preprocessing and Model Building steps, these often involve repetitive workflows. At this point, we should ask ourselves: Is it really necessary to perform every step manually? Do these steps directly help us answer our main objective, in this case, preventing more customer churn, or could we use more automated tools as long as they allow us to achieve the same goal effectively?
-
 
 
 
