@@ -26,7 +26,7 @@ The state transition and reward depend on the state and action, and the action t
 
 The ultimate goal of reinforcement learning is to find the optimal policy.
 
-## Chapter 2 State Value and Bellman Equation
+## Chapter 2 State Values and Bellman Equation
 
 This chapter introduces the concept of Bellman equation. The Bellman equation is important since it is used to evaluate the policy by calculating state value &/ action value.
 
