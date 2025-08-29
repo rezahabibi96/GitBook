@@ -72,16 +72,17 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 #### The Conventional Way (Tedious and Repetitive)
 
 
-```python
 
     <details>
     <summary>Show/Hide</summary>
-    import pandas as pd
+
+```python
+import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/data/refreshment-course-for-data-science%20and-business-intelligence-certification/telco.csv')
 df.sample(10)
-    </details>
-
 ```
+
+    </details>
 
 
 
@@ -378,23 +379,25 @@ df.sample(10)
 #### Automate it! (Minimal Effort, Maximal Gain)
 
 
-```python
 
-    from ydata_profiling import ProfileReport
+
+```python
+from ydata_profiling import ProfileReport
 profile = ProfileReport(df, title="Profiling Report")
 profile.to_file("profiling_report.html")
 profile.to_notebook_iframe()
-
 ```
+
 
 ![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/assets/refreshment-course-for-data-science%20and-business-intelligence-certification/profiling_report.jpeg)
 
 ### Data Preprocessing
 
 
-```python
 
-    from sklearn.pipeline import Pipeline
+
+```python
+from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder, OneHotEncoder, LabelEncoder
@@ -422,15 +425,16 @@ preprocessor = ColumnTransformer(transformers=[
 
 X = preprocessor.fit_transform(df.drop(columns=['Churn'], axis=1))
 y = LabelEncoder().fit_transform(df['Churn'])
-
 ```
+
 
 ### Model Building
 
 
-```python
 
-    from sklearn.model_selection import train_test_split
+
+```python
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.linear_model import LogisticRegression
 
@@ -441,8 +445,8 @@ model = LR.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
 print(classification_report(y_test, y_pred))
-
 ```
+
 
                   precision    recall  f1-score   support
     
@@ -460,14 +464,15 @@ print(classification_report(y_test, y_pred))
 As we can see in the Data Preprocessing and Model Building steps, these often involve repetitive workflows. At this point, we should ask ourselves: Is it really necessary to perform every step manually? Do these steps directly help us answer our main objective, in this case, preventing more customer churn, or could we use more automated tools as long as they allow us to achieve the same goal effectively?
 
 
-```python
 
-    from pycaret.classification import *
+
+```python
+from pycaret.classification import *
 exp = ClassificationExperiment()
 exp.setup(df.drop(columns=['customerID'], axis=1), target = 'Churn', session_id = 123)
 best = exp.compare_models()
-
 ```
+
 
 
 
