@@ -17,7 +17,7 @@ Each certification comes with predefined units that the test taker must complete
 * Data Construction
 * Data Labeling
 * Model Building
-* Model Evaaluation
+* Model Evaluation
 
 While I am not entirely sure whether these units fully reflect the best practices of a modern data science workflow, I believe they could be simplified and better aligned with current standards, such as:
 
