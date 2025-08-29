@@ -77,7 +77,7 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 <details>
 
-<summary>Click here to view the code</summary>
+<summary>click to view</summary>
 
 ```python
 import pandas as pd
@@ -104,6 +104,10 @@ df.sample(10)
 
 #### Automate it! (Minimal Effort, Maximal Gain)
 
+<details>
+
+<summary>click to view</summary>
+
 ```python
 from ydata_profiling import ProfileReport
 profile = ProfileReport(df, title="Profiling Report")
@@ -111,9 +115,15 @@ profile.to_file("profiling_report.html")
 profile.to_notebook_iframe()
 ```
 
+</details>
+
 ![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/assets/refreshment-course-for-data-science%20and-business-intelligence-certification/profiling_report.jpeg)
 
 ### Data Preprocessing
+
+<details>
+
+<summary>click to view</summary>
 
 ```python
 from sklearn.pipeline import Pipeline
@@ -146,7 +156,13 @@ X = preprocessor.fit_transform(df.drop(columns=['Churn'], axis=1))
 y = LabelEncoder().fit_transform(df['Churn'])
 ```
 
+</details>
+
 ### Model Building
+
+<details>
+
+<summary>click to view</summary>
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -161,6 +177,8 @@ y_pred = model.predict(X_test)
 
 print(classification_report(y_test, y_pred))
 ```
+
+</details>
 
 ```
               precision    recall  f1-score   support
@@ -178,18 +196,18 @@ weighted avg       0.81      0.81      0.81      1761
 
 As we can see in the Data Preprocessing and Model Building steps, these often involve repetitive workflows. At this point, we should ask ourselves: Is it really necessary to perform every step manually? Do these steps directly help us answer our main objective, in this case, preventing more customer churn, or could we use more automated tools as long as they allow us to achieve the same goal effectively?
 
+<details>
+
+<summary>click to view</summary>
+
 ```python
 from pycaret.classification import *
 exp = ClassificationExperiment()
-```
-
-```python
 exp.setup(df.drop(columns=['customerID'], axis=1), target = 'Churn', session_id = 123)
-```
-
-```python
 best = exp.compare_models()
 ```
+
+</details>
 
 |          | Model                           | Accuracy | AUC    | Recall | Prec.  | F1     | Kappa  | MCC    | TT (Sec) |
 | -------- | ------------------------------- | -------- | ------ | ------ | ------ | ------ | ------ | ------ | -------- |
