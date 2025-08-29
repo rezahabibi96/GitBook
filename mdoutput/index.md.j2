@@ -1,0 +1,22 @@
+{% extends 'markdown/index.md.j2' %}
+
+
+{% block input %}
+{% if 'hide-input' in cell.metadata.get('tags', []) %}
+<details>
+
+<summary>show / hide</summary>
+{%- endif %}
+
+```
+{%- if 'magics_language' in cell.metadata  -%}
+    {{ cell.metadata.magics_language}}
+{%- elif 'name' in nb.metadata.get('language_info', {}) -%}
+    {{ nb.metadata.language_info.name }}
+{%- endif %}
+{{ cell.source}}
+```
+{% if 'hide-input' in cell.metadata.get('tags', []) %}
+</details>
+{%- endif %}
+{% endblock input %}
