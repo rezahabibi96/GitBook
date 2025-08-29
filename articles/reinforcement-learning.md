@@ -36,7 +36,7 @@ $$
 v_\pi(s)=\mathbb{E}[G_t=R_{t+1}+\gamma R_{t+2}+\gamma ^2 R_{t+3}+...|S_t=s]
 $$
 
-where the first term, $R\_{t+1}$, is the immediate reward, while the rest terms are the future rewards. Return is the sum of the rewards obtained along a trajectory, discounted by a discount factor $\lambda$. Therefore, $G\_t$ is the (discounted) return obtained along a trajectory and we can also write $G\_t$:
+where the first term, $R\_{t+1}$, is the immediate reward, while the rest terms are the future rewards. Return is the sum of the rewards obtained along a trajectory, discounted by a discount factor $\lambda$. Therefore, $$G_t$$  is the (discounted) return obtained along a trajectory and we can also write $G\_t$:&#x20;
 
 $$
 G_t=R_{t+1}+\gamma R_{t+2}+\gamma ^2 R_{t+3}+...
