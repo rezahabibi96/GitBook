@@ -75,11 +75,17 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 #### The Conventional Way (Tedious and Repetitive)
 
+<details>
+
+<summary>Click here to view the code</summary>
+
 ```python
 import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/data/refreshment-course-for-data-science%20and-business-intelligence-certification/telco.csv')
 df.sample(10)
 ```
+
+</details>
 
 |      | customerID | gender | SeniorCitizen | Partner | Dependents | tenure | PhoneService | MultipleLines    | InternetService | OnlineSecurity      | ... | DeviceProtection    | TechSupport         | StreamingTV         | StreamingMovies     | Contract       | PaperlessBilling | PaymentMethod             | MonthlyCharges | TotalCharges | Churn |
 | ---- | ---------- | ------ | ------------- | ------- | ---------- | ------ | ------------ | ---------------- | --------------- | ------------------- | --- | ------------------- | ------------------- | ------------------- | ------------------- | -------------- | ---------------- | ------------------------- | -------------- | ------------ | ----- |
