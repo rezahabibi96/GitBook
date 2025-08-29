@@ -759,6 +759,6 @@ The example use case (BI dashboard) mentioned earlier [[3]](https://public.table
 What I would like to emphasize is that tools are just tools. As practitioners, we have the freedom to choose any technology stack, as long as it enables us to deliver insights and effectively address the business problem. You can even rely on something as simple as Excel, or take advantage of emerging Generative AI/LLM-based tools, such as LIDA [[4]](https://microsoft.github.io/lida).
 
 
-<iframe width="560" height="315" src="https://microsoft.github.io/lida/files/lidavid.mp4" title="Demo Lida" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% embed url="https://microsoft.github.io/lida/files/lidavid.mp4" %}
 
 Ultimately, while tools will continue to evolve, the fundamentals of Business Intelligence remain the same.
