@@ -75,7 +75,7 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 <details>
 
-<summary>Show/Hide</summary>
+<summary>show / hide</summary>
 
 ```python
 import pandas as pd
@@ -381,6 +381,9 @@ df.sample(10)
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 from ydata_profiling import ProfileReport
@@ -389,6 +392,7 @@ profile.to_file("profiling_report.html")
 profile.to_notebook_iframe()
 ```
 
+</details>
 
 ![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/assets/refreshment-course-for-data-science%20and-business-intelligence-certification/profiling_report.jpeg)
 
@@ -396,6 +400,9 @@ profile.to_notebook_iframe()
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 from sklearn.pipeline import Pipeline
@@ -428,11 +435,15 @@ X = preprocessor.fit_transform(df.drop(columns=['Churn'], axis=1))
 y = LabelEncoder().fit_transform(df['Churn'])
 ```
 
+</details>
 
 ### Model Building
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -448,6 +459,7 @@ y_pred = model.predict(X_test)
 print(classification_report(y_test, y_pred))
 ```
 
+</details>
 
                   precision    recall  f1-score   support
     
@@ -466,6 +478,9 @@ As we can see in the Data Preprocessing and Model Building steps, these often in
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 from pycaret.classification import *
@@ -474,6 +489,7 @@ exp.setup(df.drop(columns=['customerID'], axis=1), target = 'Churn', session_id 
 best = exp.compare_models()
 ```
 
+</details>
 
 
 
