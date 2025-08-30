@@ -21,7 +21,7 @@
 ## BOOKS
 
 * [Learning Statistics with Python](books/learning-statistics-with-python/README.md)
-  * [preface](books/learning-statistics-with-python/preface.md)
+  * [test](books/learning-statistics-with-python/test.md)
 
 ## About Me
 
