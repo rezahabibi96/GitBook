@@ -8,6 +8,12 @@
 * [MAGUMI](active-projects/magumi.md)
 * [E-DBMS](active-projects/vs-231316.md)
 
+***
+
+* [BOOKS](books/README.md)
+  * [Learning Statistics with Python](books/learning-statistics-with-python/README.md)
+    * [Preface](books/learning-statistics-with-python/preface.md)
+
 ## Articles
 
 * [Paper Review](articles/paper-review.md)

@@ -12,7 +12,7 @@ This chapter introduces the concept of Markov Decision Process (MDP) with its ke
 
 Sets:
 
-* State set: the set of states $S$
+* State set: the set of states $$S$$
 * Action set: the set of actions $A(s)$ is associated for every state
 * Reward set: the set of rewards $R(s, a)$
 
