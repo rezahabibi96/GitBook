@@ -8,11 +8,6 @@
 * [MAGUMI](active-projects/magumi.md)
 * [E-DBMS](active-projects/vs-231316.md)
 
-## BOOKS
-
-* [Learning Statistics with Python](books/vs-231316/README.md)
-  * [preface](books/vs-231316/preface.md)
-
 ## Articles
 
 * [Paper Review](articles/paper-review.md)
@@ -22,6 +17,11 @@
   * [Step 3: Reinforcement Learning from Human Feedback (RLHF)](articles/how-to-get-started-with-generative-models-and-large-language-models-llms/step-3-reinforcement-learning-from-human-feedback-rlhf.md)
 * [Reinforcement Learning](articles/reinforcement-learning.md)
 * [Refreshment Course for Data Science and Business Intelligence Certification](articles/refreshment-course-for-data-science-and-business-intelligence-certification.md)
+
+## BOOKS
+
+* [Learning Statistics with Python](books/vs-231316/README.md)
+  * [preface](books/vs-231316/preface.md)
 
 ## About Me
 
