@@ -390,7 +390,7 @@ profile.to_notebook_iframe()
 
 </details>
 
-![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/.gitbook/assets/refreshment-course-for-data-science%20and-business-intelligence-certification/profiling_report.jpeg)
+![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/profiling_report.jpeg)
 
 ### Data Preprocessing
 
@@ -750,19 +750,19 @@ What are you trying to show or say?
 
 #### Different Users Have Different Questions and Require Different Data
 
-![Data Granularity](diff_users.jpeg)
+![Data Granularity](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/diff_users.jpeg)
 
 #### Give Context
 
-![Context First](give_context.jpeg)
+![Context First](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/give_context.jpeg)
 
 #### Choosing The Right Chart
 
-![Appropriate Chart](right_chart.jpeg)
+![Appropriate Chart](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/right_chart.jpeg)
 
 #### Use Case
 
-![Use Case](use_case.png)
+![Use Case](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/use_case.png)
 
 #### PS
 
