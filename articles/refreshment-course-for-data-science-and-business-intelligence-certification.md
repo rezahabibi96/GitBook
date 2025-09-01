@@ -2,6 +2,9 @@
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 from IPython.display import Markdown
@@ -11,6 +14,7 @@ base_path = (
 )
 ```
 
+</details>
 
 ## Introduction
 
@@ -85,6 +89,9 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 import pandas as pd
@@ -92,6 +99,7 @@ df = pd.read_csv(f'{base_path}/telco.csv')
 df.sample(10)
 ```
 
+</details>
 
 
 
@@ -403,12 +411,16 @@ profile.to_notebook_iframe()
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 res_url = base_path + '/profiling_report.jpeg'
 Markdown(f'![Auto Eda]({res_url})')
 ```
 
+</details>
 
 
 
@@ -777,12 +789,16 @@ What are you trying to show or say?
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 res_url = base_path + '/diff_users.jpeg'
 Markdown(f'![Data Granularity]({res_url})')
 ```
 
+</details>
 
 
 
@@ -795,12 +811,16 @@ Markdown(f'![Data Granularity]({res_url})')
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 res_url = base_path + '/give_context.jpeg'
 Markdown(f'![Context First]({res_url})')
 ```
 
+</details>
 
 
 
@@ -813,12 +833,16 @@ Markdown(f'![Context First]({res_url})')
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 res_url = base_path + '/right_chart.jpeg'
 Markdown(f'![Appropriate Chart]({res_url})')
 ```
 
+</details>
 
 
 
@@ -831,12 +855,16 @@ Markdown(f'![Appropriate Chart]({res_url})')
 
 
 
+<details>
+
+<summary>show / hide</summary>
 
 ```python
 res_url = base_path + '/use_case.png'
 Markdown(f'![Example Case]({res_url})')
 ```
 
+</details>
 
 
 
@@ -844,8 +872,6 @@ Markdown(f'![Example Case]({res_url})')
 ![Example Case](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/use_case.png)
 
 
-
-![Use Case](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/use_case.png)
 
 #### PS
 
