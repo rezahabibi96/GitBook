@@ -2,23 +2,21 @@
 
 
 {% block input %}
-{% if 'hide-cell' not in cell.metadata.get('tags', []) %}
 {% if 'hide-input' in cell.metadata.get('tags', []) %}
 <details>
 
 <summary>show / hide</summary>
-{% endif %}
+{%- endif %}
 
 ```
-{% if 'magics_language' in cell.metadata  -%}
+{%- if 'magics_language' in cell.metadata  -%}
     {{ cell.metadata.magics_language}}
-{% elif 'name' in nb.metadata.get('language_info', {}) -%}
+{%- elif 'name' in nb.metadata.get('language_info', {}) -%}
     {{ nb.metadata.language_info.name }}
-{% endif %}
+{%- endif %}
 {{ cell.source}}
 ```
 {% if 'hide-input' in cell.metadata.get('tags', []) %}
 </details>
 {%- endif %}
-{% endif %}
 {% endblock input %}

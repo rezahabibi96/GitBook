@@ -2,11 +2,15 @@
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 from IPython.display import Markdown
 base_path = (
     "https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/"
@@ -15,6 +19,7 @@ base_path = (
 ```
 
 </details>
+
 
 ## Introduction
 
@@ -89,17 +94,22 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 import pandas as pd
 df = pd.read_csv(f'{base_path}/telco.csv')
 df.sample(10)
 ```
 
 </details>
+
 
 
 
@@ -397,11 +407,15 @@ df.sample(10)
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 from ydata_profiling import ProfileReport
 profile = ProfileReport(df, title="Profiling Report")
 profile.to_notebook_iframe()
@@ -411,16 +425,7 @@ profile.to_notebook_iframe()
 
 
 
-<details>
 
-<summary>show / hide</summary>
-
-```python
-res_url = base_path + '/profiling_report.jpeg'
-Markdown(f'![Auto Eda]({res_url})')
-```
-
-</details>
 
 
 
@@ -433,11 +438,15 @@ Markdown(f'![Auto Eda]({res_url})')
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
@@ -470,7 +479,9 @@ y = LabelEncoder().fit_transform(df['Churn'])
 
 </details>
 
+
 ### Model Building
+
 
 
 
@@ -478,7 +489,10 @@ y = LabelEncoder().fit_transform(df['Churn'])
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 from sklearn.linear_model import LogisticRegression
@@ -493,6 +507,7 @@ print(classification_report(y_test, y_pred))
 ```
 
 </details>
+
 
                   precision    recall  f1-score   support
     
@@ -511,11 +526,15 @@ As we can see in the Data Preprocessing and Model Building steps, these often in
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 from pycaret.classification import *
 exp = ClassificationExperiment()
 exp.setup(df.drop(columns=['customerID'], axis=1), target = 'Churn', session_id = 123)
@@ -523,6 +542,7 @@ best = exp.compare_models()
 ```
 
 </details>
+
 
 
 
@@ -789,16 +809,21 @@ What are you trying to show or say?
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 res_url = base_path + '/diff_users.jpeg'
 Markdown(f'![Data Granularity]({res_url})')
 ```
 
 </details>
+
 
 
 
@@ -811,16 +836,21 @@ Markdown(f'![Data Granularity]({res_url})')
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 res_url = base_path + '/give_context.jpeg'
 Markdown(f'![Context First]({res_url})')
 ```
 
 </details>
+
 
 
 
@@ -833,16 +863,21 @@ Markdown(f'![Context First]({res_url})')
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 res_url = base_path + '/right_chart.jpeg'
 Markdown(f'![Appropriate Chart]({res_url})')
 ```
 
 </details>
+
 
 
 
@@ -855,16 +890,21 @@ Markdown(f'![Appropriate Chart]({res_url})')
 
 
 
+
 <details>
 
 <summary>show / hide</summary>
 
-```python
+
+```
+python
+
 res_url = base_path + '/use_case.png'
 Markdown(f'![Example Case]({res_url})')
 ```
 
 </details>
+
 
 
 
