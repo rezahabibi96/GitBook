@@ -5,10 +5,8 @@
 {% if 'hide-cell' not in cell.metadata.get('tags', []) %}
 {% if 'hide-input' in cell.metadata.get('tags', []) %}
 <details>
-
 <summary>show / hide</summary>
 {% endif %}
-
 ```
 {% if 'magics_language' in cell.metadata  -%}
     {{ cell.metadata.magics_language}}

@@ -4,9 +4,7 @@
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -96,9 +94,7 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -409,9 +405,7 @@ df.sample(10)
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -440,9 +434,7 @@ profile.to_notebook_iframe()
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -486,9 +478,7 @@ y = LabelEncoder().fit_transform(df['Churn'])
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -528,9 +518,7 @@ As we can see in the Data Preprocessing and Model Building steps, these often in
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -811,9 +799,7 @@ What are you trying to show or say?
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -838,9 +824,7 @@ Markdown(f'![Data Granularity]({res_url})')
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -865,9 +849,7 @@ Markdown(f'![Context First]({res_url})')
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
@@ -892,9 +874,7 @@ Markdown(f'![Appropriate Chart]({res_url})')
 
 
 <details>
-
 <summary>show / hide</summary>
-
 
 ```
 python
