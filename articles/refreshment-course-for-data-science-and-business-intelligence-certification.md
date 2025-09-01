@@ -1,5 +1,17 @@
 # Refreshment Course for Data Science and Business Intelligence Certification
 
+
+
+
+```python
+from IPython.display import Markdown
+base_path = (
+    "https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/"
+    "refreshment-course-for-data-science-and-business-intelligence-certification"
+)
+```
+
+
 ## Introduction
 
 When we are asked to prove our credibility in a field, for example, as doctors we are required to show our licenses. In many professions, certification is one of the main ways to demonstrate credibility.
@@ -76,7 +88,7 @@ While effective, these steps can be somewhat repetitive, and, if I may say, a li
 
 ```python
 import pandas as pd
-df = pd.read_csv('telco.csv')
+df = pd.read_csv(f'{base_path}/telco.csv')
 df.sample(10)
 ```
 
@@ -127,112 +139,160 @@ df.sample(10)
   </thead>
   <tbody>
     <tr>
-      <th>3808</th>
-      <td>7785-RDVIG</td>
+      <th>285</th>
+      <td>6202-DYYFX</td>
       <td>Female</td>
       <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>3</td>
-      <td>Yes</td>
       <td>No</td>
       <td>No</td>
-      <td>No internet service</td>
+      <td>22</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Fiber optic</td>
+      <td>No</td>
       <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Month-to-month</td>
       <td>No</td>
-      <td>Mailed check</td>
-      <td>19.30</td>
-      <td>54.7</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>One year</td>
+      <td>Yes</td>
+      <td>Credit card (automatic)</td>
+      <td>76.00</td>
+      <td>1783.6</td>
       <td>No</td>
     </tr>
     <tr>
-      <th>4116</th>
-      <td>2466-FCCPT</td>
+      <th>4323</th>
+      <td>3707-LRWZD</td>
       <td>Female</td>
       <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>20</td>
-      <td>Yes</td>
       <td>No</td>
       <td>No</td>
-      <td>No internet service</td>
+      <td>32</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Fiber optic</td>
+      <td>No</td>
       <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>No</td>
       <td>One year</td>
       <td>No</td>
-      <td>Bank transfer (automatic)</td>
-      <td>19.70</td>
-      <td>395.6</td>
+      <td>Electronic check</td>
+      <td>84.05</td>
+      <td>2781.85</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>5302</th>
+      <td>9700-ISPUP</td>
+      <td>Female</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>10</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Month-to-month</td>
+      <td>Yes</td>
+      <td>Electronic check</td>
+      <td>65.50</td>
+      <td>616.9</td>
       <td>No</td>
     </tr>
     <tr>
-      <th>6760</th>
-      <td>5295-PCJOO</td>
+      <th>171</th>
+      <td>1875-QIVME</td>
+      <td>Female</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>2</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Fiber optic</td>
+      <td>No</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Month-to-month</td>
+      <td>Yes</td>
+      <td>Electronic check</td>
+      <td>104.40</td>
+      <td>242.8</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>6739</th>
+      <td>6994-KERXL</td>
       <td>Male</td>
       <td>0</td>
       <td>No</td>
-      <td>Yes</td>
+      <td>No</td>
       <td>4</td>
       <td>Yes</td>
       <td>No</td>
       <td>DSL</td>
-      <td>Yes</td>
+      <td>No</td>
       <td>...</td>
       <td>No</td>
       <td>No</td>
       <td>No</td>
-      <td>No</td>
+      <td>Yes</td>
       <td>Month-to-month</td>
       <td>Yes</td>
       <td>Electronic check</td>
-      <td>49.40</td>
-      <td>184.4</td>
-      <td>Yes</td>
+      <td>55.90</td>
+      <td>238.5</td>
+      <td>No</td>
     </tr>
     <tr>
-      <th>3422</th>
-      <td>1837-YQUCE</td>
-      <td>Female</td>
+      <th>868</th>
+      <td>3313-QKNKB</td>
+      <td>Male</td>
       <td>0</td>
-      <td>No</td>
-      <td>No</td>
-      <td>70</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
       <td>Yes</td>
+      <td>No</td>
+      <td>59</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Fiber optic</td>
+      <td>No</td>
       <td>...</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Two year</td>
-      <td>Yes</td>
-      <td>Bank transfer (automatic)</td>
-      <td>58.35</td>
-      <td>4214.25</td>
       <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>One year</td>
+      <td>No</td>
+      <td>Electronic check</td>
+      <td>85.55</td>
+      <td>5084.65</td>
+      <td>Yes</td>
     </tr>
     <tr>
-      <th>5056</th>
-      <td>3262-EIDHV</td>
+      <th>5102</th>
+      <td>9070-BCKQP</td>
       <td>Female</td>
       <td>0</td>
       <td>Yes</td>
-      <td>Yes</td>
+      <td>No</td>
       <td>72</td>
       <td>Yes</td>
       <td>Yes</td>
-      <td>DSL</td>
+      <td>Fiber optic</td>
       <td>Yes</td>
       <td>...</td>
       <td>Yes</td>
@@ -240,131 +300,83 @@ df.sample(10)
       <td>Yes</td>
       <td>Yes</td>
       <td>Two year</td>
-      <td>No</td>
+      <td>Yes</td>
       <td>Credit card (automatic)</td>
-      <td>84.70</td>
-      <td>5893.9</td>
+      <td>110.15</td>
+      <td>7881.2</td>
       <td>No</td>
     </tr>
     <tr>
-      <th>4754</th>
-      <td>2072-ZVJJX</td>
+      <th>6444</th>
+      <td>6302-JGYRJ</td>
       <td>Male</td>
       <td>0</td>
-      <td>Yes</td>
       <td>No</td>
-      <td>68</td>
+      <td>Yes</td>
+      <td>31</td>
       <td>Yes</td>
       <td>Yes</td>
+      <td>DSL</td>
       <td>No</td>
-      <td>No internet service</td>
       <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Two year</td>
       <td>No</td>
-      <td>Bank transfer (automatic)</td>
-      <td>25.25</td>
-      <td>1728.2</td>
-      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>One year</td>
+      <td>Yes</td>
+      <td>Mailed check</td>
+      <td>79.45</td>
+      <td>2587.7</td>
+      <td>Yes</td>
     </tr>
     <tr>
-      <th>426</th>
-      <td>2806-MLNTI</td>
-      <td>Male</td>
-      <td>1</td>
+      <th>3137</th>
+      <td>4567-AKPIA</td>
+      <td>Female</td>
+      <td>0</td>
       <td>Yes</td>
-      <td>No</td>
-      <td>52</td>
+      <td>Yes</td>
+      <td>41</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>Fiber optic</td>
       <td>No</td>
       <td>...</td>
       <td>Yes</td>
-      <td>No</td>
+      <td>Yes</td>
       <td>Yes</td>
       <td>Yes</td>
       <td>One year</td>
       <td>Yes</td>
       <td>Bank transfer (automatic)</td>
-      <td>105.10</td>
-      <td>5376.4</td>
+      <td>109.10</td>
+      <td>4454.25</td>
       <td>No</td>
     </tr>
     <tr>
-      <th>1359</th>
-      <td>7943-RQCHR</td>
+      <th>6360</th>
+      <td>8073-IJDCM</td>
       <td>Female</td>
       <td>0</td>
       <td>No</td>
       <td>No</td>
-      <td>9</td>
+      <td>1</td>
       <td>Yes</td>
-      <td>Yes</td>
-      <td>Fiber optic</td>
       <td>No</td>
+      <td>No</td>
+      <td>No internet service</td>
       <td>...</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
+      <td>No internet service</td>
+      <td>No internet service</td>
+      <td>No internet service</td>
+      <td>No internet service</td>
       <td>Month-to-month</td>
       <td>Yes</td>
-      <td>Electronic check</td>
-      <td>94.75</td>
-      <td>889.9</td>
+      <td>Mailed check</td>
+      <td>20.30</td>
+      <td>20.3</td>
       <td>Yes</td>
-    </tr>
-    <tr>
-      <th>229</th>
-      <td>0945-TSONX</td>
-      <td>Female</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>47</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>...</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Two year</td>
-      <td>Yes</td>
-      <td>Credit card (automatic)</td>
-      <td>85.30</td>
-      <td>4107.25</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>1719</th>
-      <td>2081-VEYEH</td>
-      <td>Male</td>
-      <td>0</td>
-      <td>No</td>
-      <td>No</td>
-      <td>3</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Fiber optic</td>
-      <td>No</td>
-      <td>...</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Electronic check</td>
-      <td>107.95</td>
-      <td>318.6</td>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -384,13 +396,26 @@ df.sample(10)
 ```python
 from ydata_profiling import ProfileReport
 profile = ProfileReport(df, title="Profiling Report")
-profile.to_file("profiling_report.html")
 profile.to_notebook_iframe()
 ```
 
 </details>
 
+
+
+
+```python
+res_url = base_path + '/profiling_report.jpeg'
+Markdown(f'![Auto Eda]({res_url})')
+```
+
+
+
+
+
 ![Auto Eda](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/profiling_report.jpeg)
+
+
 
 ### Data Preprocessing
 
@@ -750,17 +775,75 @@ What are you trying to show or say?
 
 #### Different Users Have Different Questions and Require Different Data
 
+
+
+
+```python
+res_url = base_path + '/diff_users.jpeg'
+Markdown(f'![Data Granularity]({res_url})')
+```
+
+
+
+
+
 ![Data Granularity](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/diff_users.jpeg)
+
+
 
 #### Give Context
 
+
+
+
+```python
+res_url = base_path + '/give_context.jpeg'
+Markdown(f'![Context First]({res_url})')
+```
+
+
+
+
+
 ![Context First](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/give_context.jpeg)
+
+
 
 #### Choosing The Right Chart
 
+
+
+
+```python
+res_url = base_path + '/right_chart.jpeg'
+Markdown(f'![Appropriate Chart]({res_url})')
+```
+
+
+
+
+
 ![Appropriate Chart](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/right_chart.jpeg)
 
+
+
 #### Use Case
+
+
+
+
+```python
+res_url = base_path + '/use_case.png'
+Markdown(f'![Example Case]({res_url})')
+```
+
+
+
+
+
+![Example Case](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/use_case.png)
+
+
 
 ![Use Case](https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/refreshment-course-for-data-science-and-business-intelligence-certification/use_case.png)
 
