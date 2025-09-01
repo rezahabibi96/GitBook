@@ -3,22 +3,6 @@
 
 
 
-<details>
-<summary>show / hide</summary>
-
-```
-python
-
-from IPython.display import Markdown
-base_path = (
-    "https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/articles/.resources/"
-    "refreshment-course-for-data-science-and-business-intelligence-certification"
-)
-```
-
-</details>
-
-
 ## Introduction
 
 When we are asked to prove our credibility in a field, for example, as doctors we are required to show our licenses. In many professions, certification is one of the main ways to demonstrate credibility.
@@ -798,19 +782,6 @@ What are you trying to show or say?
 
 
 
-<details>
-<summary>show / hide</summary>
-
-```
-python
-
-res_url = base_path + '/diff_users.jpeg'
-Markdown(f'![Data Granularity]({res_url})')
-```
-
-</details>
-
-
 
 
 
@@ -821,19 +792,6 @@ Markdown(f'![Data Granularity]({res_url})')
 #### Give Context
 
 
-
-
-<details>
-<summary>show / hide</summary>
-
-```
-python
-
-res_url = base_path + '/give_context.jpeg'
-Markdown(f'![Context First]({res_url})')
-```
-
-</details>
 
 
 
@@ -848,19 +806,6 @@ Markdown(f'![Context First]({res_url})')
 
 
 
-<details>
-<summary>show / hide</summary>
-
-```
-python
-
-res_url = base_path + '/right_chart.jpeg'
-Markdown(f'![Appropriate Chart]({res_url})')
-```
-
-</details>
-
-
 
 
 
@@ -871,19 +816,6 @@ Markdown(f'![Appropriate Chart]({res_url})')
 #### Use Case
 
 
-
-
-<details>
-<summary>show / hide</summary>
-
-```
-python
-
-res_url = base_path + '/use_case.png'
-Markdown(f'![Example Case]({res_url})')
-```
-
-</details>
 
 
 
