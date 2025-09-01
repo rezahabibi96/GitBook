@@ -21,7 +21,8 @@
 ## BOOKS
 
 * [Learning Statistics with Python](books/learning-statistics-with-python/README.md)
-  * [preface](books/learning-statistics-with-python/preface.md)
+  * [Part III: Working with Data](books/learning-statistics-with-python/part-iii-working-with-data/README.md)
+    * [Chapter 5: Descriptive Statistics](books/learning-statistics-with-python/part-iii-working-with-data/chapter-5-descriptive-statistics.md)
 
 ## About Me
 
