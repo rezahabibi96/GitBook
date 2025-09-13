@@ -21,8 +21,8 @@
 ## BOOKS
 
 * [Applied Statistics with Python](books/applied-statistics-with-python/README.md)
-  * [Chapter 1: Introduction](books/applied-statistics-with-python/chapter-1-introduction.md)
-  * [Chapter 2: Descriptive Data Analysis](books/applied-statistics-with-python/chapter-2-descriptive-data-analysis.md)
+  * [Chapter 1: Introduction](books/applied-statistics-with-python/ch-1.md)
+  * [Chapter 2: Descriptive Data Analysis](books/applied-statistics-with-python/ch-2.md)
 
 ## About Me
 

@@ -3,20 +3,6 @@
 
 
 
-```
-python
-
-from IPython.display import Markdown
-base_path = (
-    "https://raw.githubusercontent.com/rezahabibi96/GitBook/refs/heads/main/"
-    "books/applied-statistics-wuth-python/.resources"
-)
-
-base_path = "https://raw.githubusercontent.com/leonkag/Statistics0/main"
-```
-
-
-
 ## Introduction to Statistics
 
 Statistics is the science of working with data collection (-polls, surveys, experiments, etc.) and subsequent data analysis and interpretation. It has become an integral part of almost every subject from Business and Economics to Medicine, Biology, Engineering, etc.
