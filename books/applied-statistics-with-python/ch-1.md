@@ -50,7 +50,7 @@ mydata # NOTE that Python counts from row 0!!!
 
 
     Data Frame dimensions:  (453, 31)
-
+    
 
 
 
@@ -227,7 +227,7 @@ mydata.head(10)
 
 
     Data Frame dimensions:  (534, 12)
-
+    
 
 
 
@@ -403,7 +403,7 @@ mydata.head(10)
 
 
     Data Frame dimensions:  (40, 14)
-
+    
 
 
 
@@ -564,7 +564,7 @@ sns.scatterplot(data=mydata, x="mcs", y="cesd");
 
 
     
-![png](nb-chapter-1-introduction_files/nb-chapter-1-introduction_19_0.png)
+![png](ch-1_files/ch-1_19_0.png)
     
 
 
@@ -590,7 +590,7 @@ sns.scatterplot(data=mydata, x="WAIST", y="WT");
 
 
     
-![png](nb-chapter-1-introduction_files/nb-chapter-1-introduction_21_0.png)
+![png](ch-1_files/ch-1_21_0.png)
     
 
 
@@ -613,7 +613,7 @@ sns.scatterplot(data=mydata, x="PULSE", y="WT");
 
 
     
-![png](nb-chapter-1-introduction_files/nb-chapter-1-introduction_23_0.png)
+![png](ch-1_files/ch-1_23_0.png)
     
 
 
