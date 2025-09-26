@@ -18,9 +18,13 @@
 * [Reinforcement Learning](articles/reinforcement-learning.md)
 * [Refreshment Course for Data Science and Business Intelligence Certification](articles/refreshment-course-for-data-science-and-business-intelligence-certification.md)
 
+## TEACHINGS
+
+* [Applied Statistics with Python](teachings/applied-statistics-with-python/README.md)
+
 ## BOOKS
 
-* [Applied Statistics with Python](books/applied-statistics-with-python/README.md)
+* [Database Management](books/database-management/README.md)
 
 ## About Me
 
