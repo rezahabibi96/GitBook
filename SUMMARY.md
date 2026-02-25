@@ -15,7 +15,9 @@
   * [Step 1: Generative Deep Learning Foundation](articles/how-to-get-started-with-generative-models-and-large-language-models-llms/step-1-generative-deep-learning-foundation.md)
   * [Step 2: Reproduce Large Language Model (from scratch)](articles/how-to-get-started-with-generative-models-and-large-language-models-llms/step-2-reproduce-large-language-model-from-scratch.md)
   * [Step 3: Reinforcement Learning from Human Feedback (RLHF)](articles/how-to-get-started-with-generative-models-and-large-language-models-llms/step-3-reinforcement-learning-from-human-feedback-rlhf.md)
-* [Reinforcement Learning](articles/reinforcement-learning.md)
+* [Reinforcement Learning](articles/reinforcement-learning/README.md)
+  * [Chapter 1 Basic Concepts](articles/reinforcement-learning/chapter-1-basic-concepts.md)
+  * [Chapter 2 State Values and Bellman Equation](articles/reinforcement-learning/chapter-2-state-values-and-bellman-equation.md)
 * [Refreshment Course for Data Science and Business Intelligence Certification](articles/refreshment-course-for-data-science-and-business-intelligence-certification.md)
 
 ## TEACHINGS
