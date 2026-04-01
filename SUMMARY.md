@@ -23,6 +23,7 @@
 ## TEACHINGS
 
 * [Applied Statistics with Python](teachings/applied-statistics-with-python/README.md)
+  * [ch-1](teachings/applied-statistics-with-python/ch-1.md)
 
 ## BOOKS
 
