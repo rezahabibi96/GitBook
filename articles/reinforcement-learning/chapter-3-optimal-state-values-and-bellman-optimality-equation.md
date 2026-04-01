@@ -2,7 +2,7 @@
 
 This chapter introduces the concept of optimal policy and the Bellman optimality equation. Recall that the ultimate goal of reinforcement learning is to find the optimal policy.
 
-A policy $$\pi^_$$ is optimal if $$v\_{\pi^_}(s) \geq v\_{\pi}(s)$$ for all $$s$$ and for any other policy $$\pi$$.
+A policy $$\pi^*$$ is optimal if $$v\_{\pi^*}(s) \geq v\_{\pi}(s)$$ for all $$s$$ and for any other policy $$\pi$$.
 
 The Bellman optimality equation (elementwise form) defined as:
 
