@@ -1,12 +1,7 @@
-# Chapter 1: Introduction
-
-
-
-
-
-
+# Chapter 1 Introduction
 
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -28,7 +23,6 @@ from io import BytesIO
 
 </details>
 
-
 ## Introduction to Statistics
 
 Statistics is the science of working with data collection (-polls, surveys, experiments, etc.) and subsequent data analysis and interpretation. It has become an integral part of almost every subject from Business and Economics to Medicine, Biology, Engineering, etc.
@@ -45,14 +39,10 @@ The treatment group had about 5% better chance of having a sizeable cholesterolr
 
 ## Data Introduction
 
-The files have to be in the right data format for Statistical software to read and analyze. Two standard files will be used extensively: HELPrct (medical data on substance abusers) and CPS85 (-economics data on hourly wages). We show the summary of a
-portion of the first file below. The lines of Python code are commented out with text starting with a hashtag #. These are explanations for us humans to understand what is going on. Python approaches Statistics and Data Science by introducing many libraries like pandas imported below. Pandas library has the command *read_csv()* that reads in data files in comma-separated-values (.csv) format, which is used below. The. *shape* command shows that there are 453 substance abusers in the HELPrct file with 31columns describing them. Here, we show only a very small portion of it selecting variables (columns) of interest with double brackets `mydata[[‘cesd’,...]]`.
-
-
-
-
+The files have to be in the right data format for Statistical software to read and analyze. Two standard files will be used extensively: HELPrct (medical data on substance abusers) and CPS85 (-economics data on hourly wages). We show the summary of a portion of the first file below. The lines of Python code are commented out with text starting with a hashtag #. These are explanations for us humans to understand what is going on. Python approaches Statistics and Data Science by introducing many libraries like pandas imported below. Pandas library has the command _read\_csv()_ that reads in data files in comma-separated-values (.csv) format, which is used below. The. _shape_ command shows that there are 453 substance abusers in the HELPrct file with 31columns describing them. Here, we show only a very small portion of it selecting variables (columns) of interest with double brackets `mydata[[‘cesd’,...]]`.
 
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -70,166 +60,32 @@ mydata # NOTE that Python counts from row 0!!!
 
 </details>
 
+```
+Data Frame dimensions:  (453, 31)
+```
 
-    Data Frame dimensions:  (453, 31)
+|     | cesd | age | mcs       | pcs       | homeless | substance | sex    |
+| --- | ---- | --- | --------- | --------- | -------- | --------- | ------ |
+| 0   | 49   | 37  | 25.111990 | 58.413689 | housed   | cocaine   | male   |
+| 1   | 30   | 37  | 26.670307 | 36.036942 | homeless | alcohol   | male   |
+| 2   | 39   | 26  | 6.762923  | 74.806328 | housed   | heroin    | male   |
+| 3   | 15   | 39  | 43.967880 | 61.931679 | housed   | heroin    | female |
+| 4   | 39   | 32  | 21.675755 | 37.345585 | homeless | cocaine   | male   |
+| ... | ...  | ... | ...       | ...       | ...      | ...       | ...    |
+| 448 | 28   | 33  | 41.943066 | 56.968681 | housed   | heroin    | male   |
+| 449 | 37   | 49  | 62.175503 | 57.253838 | housed   | alcohol   | male   |
+| 450 | 28   | 39  | 33.434536 | 40.045715 | homeless | heroin    | female |
+| 451 | 11   | 59  | 54.424816 | 53.732044 | homeless | cocaine   | male   |
+| 452 | 35   | 45  | 30.212227 | 43.476074 | homeless | alcohol   | male   |
 
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cesd</th>
-      <th>age</th>
-      <th>mcs</th>
-      <th>pcs</th>
-      <th>homeless</th>
-      <th>substance</th>
-      <th>sex</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>49</td>
-      <td>37</td>
-      <td>25.111990</td>
-      <td>58.413689</td>
-      <td>housed</td>
-      <td>cocaine</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>30</td>
-      <td>37</td>
-      <td>26.670307</td>
-      <td>36.036942</td>
-      <td>homeless</td>
-      <td>alcohol</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>39</td>
-      <td>26</td>
-      <td>6.762923</td>
-      <td>74.806328</td>
-      <td>housed</td>
-      <td>heroin</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>15</td>
-      <td>39</td>
-      <td>43.967880</td>
-      <td>61.931679</td>
-      <td>housed</td>
-      <td>heroin</td>
-      <td>female</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>39</td>
-      <td>32</td>
-      <td>21.675755</td>
-      <td>37.345585</td>
-      <td>homeless</td>
-      <td>cocaine</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>448</th>
-      <td>28</td>
-      <td>33</td>
-      <td>41.943066</td>
-      <td>56.968681</td>
-      <td>housed</td>
-      <td>heroin</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>449</th>
-      <td>37</td>
-      <td>49</td>
-      <td>62.175503</td>
-      <td>57.253838</td>
-      <td>housed</td>
-      <td>alcohol</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>450</th>
-      <td>28</td>
-      <td>39</td>
-      <td>33.434536</td>
-      <td>40.045715</td>
-      <td>homeless</td>
-      <td>heroin</td>
-      <td>female</td>
-    </tr>
-    <tr>
-      <th>451</th>
-      <td>11</td>
-      <td>59</td>
-      <td>54.424816</td>
-      <td>53.732044</td>
-      <td>homeless</td>
-      <td>cocaine</td>
-      <td>male</td>
-    </tr>
-    <tr>
-      <th>452</th>
-      <td>35</td>
-      <td>45</td>
-      <td>30.212227</td>
-      <td>43.476074</td>
-      <td>homeless</td>
-      <td>alcohol</td>
-      <td>male</td>
-    </tr>
-  </tbody>
-</table>
-<p>453 rows × 7 columns</p>
-</div>
-
-
+453 rows × 7 columns
 
 The file above has a **data frame (data matrix)** form. Each row (case) is a patient, and each column is a variable describing that patient. Variables have different types. The `age`, `cesd` (depression score), `mcs` (mental health score), and `pcs` (physical health score) are all **numerical (quantitative)** variables. The `homeless`, `sex`, and `substance` are all **categorical (qualitative) variables** (labels).
 
 The CPS85.csv data set on wages is shown below:
 
-
-
-
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -246,166 +102,29 @@ mydata.head(10)
 
 </details>
 
+```
+Data Frame dimensions:  (534, 12)
+```
 
-    Data Frame dimensions:  (534, 12)
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>wage</th>
-      <th>educ</th>
-      <th>race</th>
-      <th>sex</th>
-      <th>south</th>
-      <th>married</th>
-      <th>exper</th>
-      <th>sector</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>9.00</td>
-      <td>10</td>
-      <td>W</td>
-      <td>M</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>27</td>
-      <td>const</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>5.50</td>
-      <td>12</td>
-      <td>W</td>
-      <td>M</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>20</td>
-      <td>sales</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.80</td>
-      <td>12</td>
-      <td>W</td>
-      <td>F</td>
-      <td>NS</td>
-      <td>Single</td>
-      <td>4</td>
-      <td>sales</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>10.50</td>
-      <td>12</td>
-      <td>W</td>
-      <td>F</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>29</td>
-      <td>clerical</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>15.00</td>
-      <td>12</td>
-      <td>W</td>
-      <td>M</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>40</td>
-      <td>const</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>9.00</td>
-      <td>16</td>
-      <td>W</td>
-      <td>F</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>27</td>
-      <td>clerical</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>9.57</td>
-      <td>12</td>
-      <td>W</td>
-      <td>F</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>5</td>
-      <td>service</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>15.00</td>
-      <td>14</td>
-      <td>W</td>
-      <td>M</td>
-      <td>NS</td>
-      <td>Single</td>
-      <td>22</td>
-      <td>sales</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>11.00</td>
-      <td>8</td>
-      <td>W</td>
-      <td>M</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>42</td>
-      <td>manuf</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>5.00</td>
-      <td>12</td>
-      <td>W</td>
-      <td>F</td>
-      <td>NS</td>
-      <td>Married</td>
-      <td>14</td>
-      <td>sales</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+|   | wage  | educ | race | sex | south | married | exper | sector   |
+| - | ----- | ---- | ---- | --- | ----- | ------- | ----- | -------- |
+| 0 | 9.00  | 10   | W    | M   | NS    | Married | 27    | const    |
+| 1 | 5.50  | 12   | W    | M   | NS    | Married | 20    | sales    |
+| 2 | 3.80  | 12   | W    | F   | NS    | Single  | 4     | sales    |
+| 3 | 10.50 | 12   | W    | F   | NS    | Married | 29    | clerical |
+| 4 | 15.00 | 12   | W    | M   | NS    | Married | 40    | const    |
+| 5 | 9.00  | 16   | W    | F   | NS    | Married | 27    | clerical |
+| 6 | 9.57  | 12   | W    | F   | NS    | Married | 5     | service  |
+| 7 | 15.00 | 14   | W    | M   | NS    | Single  | 22    | sales    |
+| 8 | 11.00 | 8    | W    | M   | NS    | Married | 42    | manuf    |
+| 9 | 5.00  | 12   | W    | F   | NS    | Married | 14    | sales    |
 
 Variables `wage`, `age`, `educ`, and `exper` are numerical, while `race`, `sex`, `south`, `married`, and `sector` are categorical.
 
 Lastly, MHEALTH.csv data file contains a lot of information about the health measures of 40 males. All variables are numerical.
 
-
-
-
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -422,138 +141,24 @@ mydata.head(10)
 
 </details>
 
+```
+Data Frame dimensions:  (40, 14)
+```
 
-    Data Frame dimensions:  (40, 14)
+|   | AGE | HT   | WT    | WAIST | PULSE | BMI  |
+| - | --- | ---- | ----- | ----- | ----- | ---- |
+| 0 | 20  | 69.7 | 137.4 | 75.2  | 88    | 19.9 |
+| 1 | 25  | 67.6 | 151.3 | 75.6  | 64    | 23.3 |
+| 2 | 34  | 63.7 | 119.5 | 75.7  | 56    | 20.7 |
+| 3 | 29  | 70.0 | 162.4 | 77.0  | 56    | 23.4 |
+| 4 | 22  | 66.2 | 144.2 | 78.1  | 64    | 23.2 |
+| 5 | 41  | 66.5 | 135.0 | 78.8  | 60    | 21.5 |
+| 6 | 26  | 68.5 | 144.1 | 79.6  | 64    | 21.6 |
+| 7 | 20  | 66.3 | 151.0 | 79.9  | 72    | 24.2 |
+| 8 | 36  | 70.3 | 137.1 | 81.6  | 64    | 19.6 |
+| 9 | 54  | 65.6 | 139.0 | 82.5  | 60    | 22.7 |
 
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AGE</th>
-      <th>HT</th>
-      <th>WT</th>
-      <th>WAIST</th>
-      <th>PULSE</th>
-      <th>BMI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>20</td>
-      <td>69.7</td>
-      <td>137.4</td>
-      <td>75.2</td>
-      <td>88</td>
-      <td>19.9</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>25</td>
-      <td>67.6</td>
-      <td>151.3</td>
-      <td>75.6</td>
-      <td>64</td>
-      <td>23.3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>34</td>
-      <td>63.7</td>
-      <td>119.5</td>
-      <td>75.7</td>
-      <td>56</td>
-      <td>20.7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>29</td>
-      <td>70.0</td>
-      <td>162.4</td>
-      <td>77.0</td>
-      <td>56</td>
-      <td>23.4</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>22</td>
-      <td>66.2</td>
-      <td>144.2</td>
-      <td>78.1</td>
-      <td>64</td>
-      <td>23.2</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>41</td>
-      <td>66.5</td>
-      <td>135.0</td>
-      <td>78.8</td>
-      <td>60</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>26</td>
-      <td>68.5</td>
-      <td>144.1</td>
-      <td>79.6</td>
-      <td>64</td>
-      <td>21.6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>20</td>
-      <td>66.3</td>
-      <td>151.0</td>
-      <td>79.9</td>
-      <td>72</td>
-      <td>24.2</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>36</td>
-      <td>70.3</td>
-      <td>137.1</td>
-      <td>81.6</td>
-      <td>64</td>
-      <td>19.6</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>54</td>
-      <td>65.6</td>
-      <td>139.0</td>
-      <td>82.5</td>
-      <td>60</td>
-      <td>22.7</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-In addition, numerical (quantitative) variables can be subdivided into **discrete** and **continuous**. **Discrete variables** can only take on distinct, separate values, which are typically counted in whole numbers (0,1,2,. . . ). Unlike
-**continuous variables**, which can take on any value within a range, discrete variables have a finite or countably infnite number of possible values. For example, the number of students in a class, the number of cars in a garage, the number of books on a shelf, etc. are discrete, while distance, time, height, weight, etc. are continuous.
+In addition, numerical (quantitative) variables can be subdivided into **discrete** and **continuous**. **Discrete variables** can only take on distinct, separate values, which are typically counted in whole numbers (0,1,2,. . . ). Unlike **continuous variables**, which can take on any value within a range, discrete variables have a finite or countably infnite number of possible values. For example, the number of students in a class, the number of cars in a garage, the number of books on a shelf, etc. are discrete, while distance, time, height, weight, etc. are continuous.
 
 Categorical (qualitative) variables can also be subdivided into **nominal** and **ordinal**. **Nominal variables** represent categories or labels without any inherent order or relationship. For example, gender, eye color, marital status, experimental group (Treatment vs. Control), country, etc. The values of nominal variables are called levels. Ordinal variables are categorical variables that have order or ranking, but the intervals in between the levels are not necessarily uniform or meaningful. For example, education level (high school < bachelor < master < Ph.D.), income (low < medium < high), and Likert scale in surveys (strongly disagree < disagree < neutral < agree < strongly agree).
 
@@ -561,10 +166,8 @@ For numerical variables both discrete and continuous, numerical statistics likem
 
 In addition to the individual variable classifcation, relationships between variables play an important role in Statistics. For two numerical variables, a scatterplot illustrates a possible relationship. For example, consider the dependence between `cesd` depression score and `mcs` mental score for substance abusers shown in the Figure below:
 
-
-
-
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -579,19 +182,12 @@ sns.scatterplot(data=mydata, x="mcs", y="cesd");
 
 </details>
 
-
-
-    
-![png](ch-1_files/ch-1_20_0.png)
-    
-
+![png](../../.gitbook/assets/ch-1_20_0.png)
 
 Not surprisingly, as the mental score becomes higher, the depression score decreases, so these variables are **negatively associated (dependent)**. In this setting, the x-axis mcs would be an **explanatory (independent, predictor) variable**, while the y-axis cesd would be a **response (dependent) variable**. On the other hand, men's weight (`WT`) is **positively associated** with waist measurement (`WAIST`) as shown in the Figure below.
 
-
-
-
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -605,19 +201,12 @@ sns.scatterplot(data=mydata, x="WAIST", y="WT");
 
 </details>
 
-
-
-    
-![png](ch-1_files/ch-1_22_0.png)
-    
-
+![png](../../.gitbook/assets/ch-1_22_0.png)
 
 Finally, men's weight (`WT`) is **not associated (independent)** with pulse (`PULSE`) as shown in Figure below.
 
-
-
-
 <details>
+
 <summary>show / hide</summary>
 
 ```
@@ -628,16 +217,11 @@ sns.scatterplot(data=mydata, x="PULSE", y="WT");
 
 </details>
 
-
-
-    
-![png](ch-1_files/ch-1_24_0.png)
-    
-
+![png](../../.gitbook/assets/ch-1_24_0.png)
 
 Remember that **association does not imply causation**. The `mcs` does not cause the reduction in `cesd` score; they are just measurements of depression and mental state which are related to each other. A classic example of association without causation is NYC subway fare and average pizza slice price, which have stayed almost the same throughout the years since the 1950s. Both prices have grown over the years due to inflation, etc., not one causing the another.
 
-The data is collected in two primary ways: **observational studies and experiments**. If researchers do not directly interfere with how the data arises, it is an **observational study**. The data sets considered in this section are all observational. Any opinion polls, surveys, etc. are observational. A study looking back in time at medical or business records (*retrospective studies*), and *prospective studies* where a cohort (group) of similar individuals is followed over many years into the future are all observational. **Experiments**, however, involve manipulating one or more independent variables to observe their efect on a dependent variable. The example at the beginning of the chapter on the effects of a new cholesterol-reducing drug was an experimental study. Researchers randomized patients into treatment and control groups and proportions were compared. The explanatory group variable has two levels (treatment and control). The proportions by group are the responses. *Observational studies may only show the association/relationship between variables, not cause and effect. Only a carefully designed randomized experiment may be used to establish cause and effect*.
+The data is collected in two primary ways: **observational studies and experiments**. If researchers do not directly interfere with how the data arises, it is an **observational study**. The data sets considered in this section are all observational. Any opinion polls, surveys, etc. are observational. A study looking back in time at medical or business records (_retrospective studies_), and _prospective studies_ where a cohort (group) of similar individuals is followed over many years into the future are all observational. **Experiments**, however, involve manipulating one or more independent variables to observe their efect on a dependent variable. The example at the beginning of the chapter on the effects of a new cholesterol-reducing drug was an experimental study. Researchers randomized patients into treatment and control groups and proportions were compared. The explanatory group variable has two levels (treatment and control). The proportions by group are the responses. _Observational studies may only show the association/relationship between variables, not cause and effect. Only a carefully designed randomized experiment may be used to establish cause and effect_.
 
 To illustrate why it would be wrong to infer cause and effect based on a simple association, let's consider the following example. A medical study focusing on blood pressure and mortality may find that low blood pressure is associated with a higher risk of mortality. However, it does not cause death directly, rather, it is due to the confounding effect of heart disease. A variable that is associated with both the explanatory (low blood pressure) and response variable (mortality) but is not directly accounted for by the study is called a **confounding (lurking) variable**. There are ways to account for confounding variables; they should not be dismissed
 
@@ -647,7 +231,7 @@ In statistics, a **population** is the pool of all individuals or items from whi
 
 In Statistics, we almost always use a **simple random sample** - an **unbiased** approach where a subset is chosen randomly with all items equally likely to be selected (like a computerized raffle). Systematic bias is different from natural variation in the data, and cannot be corrected by any statistical techniques. For example, a survey on smartphone usage conducted on tech-savvy young users would be highly inaccurate in reflecting the entire population's phone usage.
 
-Another possible flaw in sampling is a **voluntary response** sample. For example, a voting questionnaire was mailed to a large sample of individuals, but only a much smaller sub-sample responded corresponding to a high **non-response rate**. It could be that most people who felt strongly about the election responded, which would produce an additional *bias*. Similarly, self-selected polls of viewers of highly partisan networks like FOX and MSNBC are not representative of the entire population. There are other more specialized sampling techniques like **stratified sampling**, **cluster sampling**, etc., but they are mostly used in polling and will not be considered in this textbook.
+Another possible flaw in sampling is a **voluntary response** sample. For example, a voting questionnaire was mailed to a large sample of individuals, but only a much smaller sub-sample responded corresponding to a high **non-response rate**. It could be that most people who felt strongly about the election responded, which would produce an additional _bias_. Similarly, self-selected polls of viewers of highly partisan networks like FOX and MSNBC are not representative of the entire population. There are other more specialized sampling techniques like **stratified sampling**, **cluster sampling**, etc., but they are mostly used in polling and will not be considered in this textbook.
 
 ## Statistical Experiments
 

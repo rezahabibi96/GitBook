@@ -18,6 +18,7 @@
 * [Reinforcement Learning](articles/reinforcement-learning/README.md)
   * [Chapter 1 Basic Concepts](articles/reinforcement-learning/chapter-1-basic-concepts.md)
   * [Chapter 2 State Values and Bellman Equation](articles/reinforcement-learning/chapter-2-state-values-and-bellman-equation.md)
+  * [Chapter 3 Optimal State Values and Bellman Optimality Equation](articles/reinforcement-learning/chapter-3-optimal-state-values-and-bellman-optimality-equation.md)
 * [Refreshment Course for Data Science and Business Intelligence Certification](articles/refreshment-course-for-data-science-and-business-intelligence-certification.md)
 
 ## TEACHINGS
