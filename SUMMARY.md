@@ -19,6 +19,13 @@
   * [Chapter 1 Basic Concepts](articles/reinforcement-learning/chapter-1-basic-concepts.md)
   * [Chapter 2 State Values and Bellman Equation](articles/reinforcement-learning/chapter-2-state-values-and-bellman-equation.md)
   * [Chapter 3 Optimal State Values and Bellman Optimality Equation](articles/reinforcement-learning/chapter-3-optimal-state-values-and-bellman-optimality-equation.md)
+  * [Chapter 4 Value Iteration and Policy Iteration](articles/reinforcement-learning/chapter-4-value-iteration-and-policy-iteration.md)
+  * [Chapter 5 Monte Carlo Methods](articles/reinforcement-learning/chapter-5-monte-carlo-methods.md)
+  * [Chapter 6 Stochastics Approximation](articles/reinforcement-learning/chapter-6-stochastics-approximation.md)
+  * [Chapter 7 Temporal Difference](articles/reinforcement-learning/chapter-7-temporal-difference.md)
+  * [Chapter 8 Value Function](articles/reinforcement-learning/chapter-8-value-function.md)
+  * [Chapter 9 Policy Gradient Methods](articles/reinforcement-learning/chapter-9-policy-gradient-methods.md)
+  * [Chapter 10 Actor-Critic Methods](articles/reinforcement-learning/chapter-10-actor-critic-methods.md)
 * [Refreshment Course for Data Science and Business Intelligence Certification](articles/refreshment-course-for-data-science-and-business-intelligence-certification.md)
 
 ## TEACHINGS
