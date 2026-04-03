@@ -17,13 +17,13 @@ $$
  \pi_{k+1}=\arg \max_\pi \sum_a{\pi (a|s) q_{\pi_k} (s,a)}
 $$
 
-As we can see, to find a better policy, the key is to calculate $q_{\pi_k} (s,a)$.
+As we can see, to find a better policy, the key is to calculate $$q_{\pi_k} (s,a)$$.
 
 ## Estimating Action Value
 
 There are two ways to express the action value:
 
-1. Expression 1 requires the model $p(r|s,a)$ and $p(s'|s,a)$
+1. Expression 1 requires the model $$p(r|s,a)$$ and $$p(s'|s,a)$$
 
     $$
     q_{\pi_k} (s,a) = \sum_r{p(r|s,a)r + \gamma \sum_{s'}{p(s'|s,a)v_{\pi_k} (s')}}
@@ -37,15 +37,15 @@ There are two ways to express the action value:
     q_{\pi_k} (s,a)=\mathbb{E}[G_t|S_t=s, A_t=a]
     $$
 
-    We can use Expression 2 to obtain $q$ based on the data (samples/experiences).
+    We can use Expression 2 to obtain $$q$$ based on the data (samples/experiences).
 
 ## Monte Carlo Approximation
 
-Since we do not have the model and do not know the true value of the expectation, and we only have the data, how do we obtain $q_{\pi_k} (s,a)$?
+Since we do not have the model and do not know the true value of the expectation, and we only have the data, how do we obtain $$q_{\pi_k} (s,a)$$?
 
-- Starting from $(s,a)$, following policy $\pi_k$, generate an episode
-- The return of this episode is $g(s,a)$, which is a sample of $G_t$ in $q_{\pi_k} (s,a)=\mathbb{E}[G_t|S_t=s, A_t=a]$
-- Suppose we have a set of episodes $\{g^{(j)}(s,a)\}$, then
+- Starting from $$(s,a)$$, following policy $$\pi_k$$, generate an episode
+- The return of this episode is $$g(s,a)$$, which is a sample of $$G_t$$ in $$q_{\pi_k} (s,a)=\mathbb{E}[G_t|S_t=s, A_t=a]$$
+- Suppose we have a set of episodes $$\{g^{(j)}(s,a)\}$$, then
 
     $$
     q_{\pi_k} (s,a)=\mathbb{E}[G_t|S_t=s, A_t=a]\approx \frac{1}{N}\sum_{i=1}^{N}{g^{(i)}(s,a)}
@@ -53,14 +53,14 @@ Since we do not have the model and do not know the true value of the expectation
 
 ## Greedy vs Epsilon-Greedy Policies
 
-There are several variants of MC-based RL, such as MC basic, MC exploring start, and MC $\epsilon$-greedy, but the underlying idea is similar among all of them. Therefore, understanding MC basic is sufficient from my perspective.
+There are several variants of MC-based RL, such as MC basic, MC exploring start, and MC $$\epsilon$$-greedy, but the underlying idea is similar among all of them. Therefore, understanding MC basic is sufficient from my perspective.
 
-However, it is important to understand greedy policies vs $\epsilon$-greedy policies:
+However, it is important to understand greedy policies vs $$\epsilon$$-greedy policies:
 
 - In the policy improvement or policy update step, the greedy policy always chooses the action with the highest action value for every state, leaving other actions underrepresented (less exploration, more exploitation)
-- On the other hand, the $\epsilon$-greedy policy seeks to balance the trade-off between exploitation and exploration through the parameter $\epsilon$
+- On the other hand, the $$\epsilon$$-greedy policy seeks to balance the trade-off between exploitation and exploration through the parameter $$\epsilon$$
 
-If $\epsilon \rightarrow 0$, it becomes greedy (exploitation). However, when $\epsilon \rightarrow 1$, it becomes uniform (exploration)
+If $$\epsilon \rightarrow 0$$, it becomes greedy (exploitation). However, when $$\epsilon \rightarrow 1$$, it becomes uniform (exploration)
 
 $$
 \pi(a|s) = 
@@ -70,4 +70,4 @@ $$
 \end{cases}
 $$
 
-In MC-based RL, we need the state, action, and reward sets with an initial policy $\pi_0$.
+In MC-based RL, we need the state, action, and reward sets with an initial policy $$\pi_0$$.
