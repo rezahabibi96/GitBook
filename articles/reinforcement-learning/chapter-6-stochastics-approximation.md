@@ -13,7 +13,7 @@ This chapter introduces the concept of stochastic approximation (SA), with two e
 
 Stochastic approximation (SA) refers to a broad class of stochastic iterative algorithms for solving **root finding** or **optimization problems**.
 
-Many problems can eventually be converted into root finding problems. Suppose we are given the problem of how to calculate the mean $\bar x$, that is, $\mathbb{E}[X]\approx \bar x$.
+Many problems can eventually be converted into root finding problems. Suppose we are given the problem of how to calculate the mean $$\bar x$$, that is, $$\mathbb{E}[X]\approx \bar x$$.
 
 - The first way, which is trivial, is to collect all the samples and then calculate the average, similar to what MC does.
 
@@ -33,7 +33,7 @@ $$
 g(w)=0,
 $$
 
-where $g:\R \rightarrow \R$ is a function and $w \in \R$ is the variable to be solved (the root).
+where $$g:\R \rightarrow \R$$ is a function and $$w \in \R$$ is the variable to be solved (the root).
 
 It is clearly a root finding problem, and the Robbins-Monro (RM) algorithm can solve the problem as follows:
 
@@ -43,19 +43,19 @@ $$
 
 where:
 
-- $w_k$ is the $k-$th estimate of the root
-- $\~{g}(w_k,\eta_k)= g(w_k) + \eta_k$ is the $k-$th noisy observation. Why $\~{g}$ instead of $g$? Because we do not always know the true form of $g$, and many times we only have data/samples of $g$.
-- $\alpha_k$ is a positive coefficient
+- $$w_k$$ is the $$k-$$th estimate of the root
+- $$\~{g}(w_k,\eta_k)= g(w_k) + \eta_k$$ is the $$k-$$th noisy observation. Why $$\~{g}$$ instead of $$g$$? Because we do not always know the true form of $$g$$, and many times we only have data/samples of $$g$$.
+- $$\alpha_k$$ is a positive coefficient
 
-To make it clear, consider the case where we need to estimate $\mathbb{E}[X]$. We do not know $X$, and we only have samples/data of $X$, that is $x \sim X$.
+To make it clear, consider the case where we need to estimate $$\mathbb{E}[X]$$. We do not know $$X$$, and we only have samples/data of $$X$$, that is $$x \sim X$$.
 
-We can rephrase the problem into $g(w)=w-\mathbb{E}[X]$, where $w$ is our estimate of $\mathbb{E}[X]$. Then, finding $\mathbb{E}[X]$ is equivalent to finding the root of $g$, that is $w$ such that
+We can rephrase the problem into $$g(w)=w-\mathbb{E}[X]$$, where $$w$$ is our estimate of $$\mathbb{E}[X]$$. Then, finding $$\mathbb{E}[X]$$ is equivalent to finding the root of $$g$$, that is $$w$$ such that
 
 $$
 g(w)=0 \iff w=\mathbb{E}[X]
 $$
 
-Please keep in mind that we do not know $g$, since we do not know $X$. However, since we have samples of $X$, we may obtain the noisy observation $\~{g}$ as follows:
+Please keep in mind that we do not know $$g$$, since we do not know $$X$$. However, since we have samples of $$X$$, we may obtain the noisy observation $$\~{g}$$ as follows:
 
 $$
 \~{g}(w,\eta)=w-x
@@ -75,7 +75,7 @@ Therefore, we have shown that the mean estimation problem can eventually be conv
 
 ## Stochastic Gradient Descent
 
-Suppose we would like to find the optimization of $J(w)$
+Suppose we would like to find the optimization of $$J(w)$$
 
 $$
 \min_{w} J(w) = \mathbb{E}[f(w,X)]
@@ -83,9 +83,9 @@ $$
 
 where:
 
-- $w$ is the parameters to be optimized
-- $X$ is a random variable, and the expectation is with respect to $X$
-- $w$ and $X$ can be either scalars or vectors, and the function $f(.)$ is a scalar
+- $$w$$ is the parameters to be optimized
+- $$X$$ is a random variable, and the expectation is with respect to $$X$$
+- $$w$$ and $$X$$ can be either scalars or vectors, and the function $$f(.)$$ is a scalar
 
 It is clearly an optimization problem, and the SGD algorithm can solve the problem as follows:
 
@@ -93,7 +93,7 @@ $$
 w_{k+1}=w_k - \alpha_k \nabla_wf(w_k, x_k) \quad k=1,2,3,...
 $$
 
-Many problems can eventually be converted into optimization problems. To make it clear, consider the same case where we need to estimate $\mathbb{E}[X]$. We do not know $X$, and we only have samples/data of $X$, that is $x \sim X$.
+Many problems can eventually be converted into optimization problems. To make it clear, consider the same case where we need to estimate $$\mathbb{E}[X]$$. We do not know $$X$$, and we only have samples/data of $$X$$, that is $$x \sim X$$.
 
 We can rephrase the problem into
 
@@ -101,9 +101,9 @@ $$
 \min_{w} J(w) = \mathbb{E}[f(w,X)]
 $$
 
-where $f(w,X)= \frac{1}{2} \Vert w-X \Vert ^2$, and $w$ is our estimate of $\min J$.
+where $$f(w,X)= \frac{1}{2} \Vert w-X \Vert ^2$$, and $$w$$ is our estimate of $$\min J$$.
 
-To find its optimized value, we must find the derivative of $f$, and we know that the derivative of $f$ is $\nabla_w f(w,X)=w-X$, and the optimal solution $w^*$ must satisfy
+To find its optimized value, we must find the derivative of $$f$$, and we know that the derivative of $$f$$ is $$\nabla_w f(w,X)=w-X$$, and the optimal solution $$w^*$$ must satisfy
 
 $$
 \nabla_w J(w)=0
@@ -113,7 +113,7 @@ $$
 \nabla_w \mathbb{E}[f(w,X)] = \mathbb{E}[{\nabla_w f(w,X)}] = \mathbb{E}[w-X] = 0
 $$
 
-Then, finding $\mathbb{E}[X]$ is equivalent to solving the optimization problem of $J(w)$, that is $w$ such that
+Then, finding $$\mathbb{E}[X]$$ is equivalent to solving the optimization problem of $$J(w)$$, that is $$w$$ such that
 
 $$
 w=\min J \iff w=\mathbb{E}[X]
