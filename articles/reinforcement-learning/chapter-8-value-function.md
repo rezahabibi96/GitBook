@@ -16,17 +16,17 @@ So far, we have used the tabular representation of the state value and action va
 
 ## Function Approximation
 
-Therefore, the main idea is to use parameterized functions: $\hat{v}(s,w)$ to approximate $v_\pi(s)$, where $w\in \mathbb{R}^m$ is the parameter vector.
+Therefore, the main idea is to use parameterized functions: $$\hat{v}(s,w)$$ to approximate $$v_\pi(s)$$, where $$w\in \mathbb{R}^m$$ is the parameter vector.
 
 ## Objective Function
 
-To find the optimal $w$, we need an objective function, which can be defined as:
+To find the optimal $$w$$, we need an objective function, which can be defined as:
 
 $$
 J(w)=\mathbb{E}_{S \sim d_\pi}\left[ \left( v_\pi(S) - \hat{v}(S,w) \right)^2 \right]
 $$
 
-where $d_\pi$ is the stationary distribution, i.e., the distribution of states under policy $\pi$ after long-run behavior. Then, we can apply stochastic gradient descent as:
+where $$d_\pi$$ is the stationary distribution, i.e., the distribution of states under policy $$\pi$$ after long-run behavior. Then, we can apply stochastic gradient descent as:
 
 $$
 w_{t+1} = w_{t} + \alpha_{t}\left( v_\pi(s_t) - \hat{v}(s_t,w_t) \right) \nabla_w \hat{v}(s_t,w_t)
@@ -34,19 +34,19 @@ $$
 
 For more details of its derivation, please refer to slides 22 and 44.
 
-However, note that this is not feasible since it requires the true state value $v_\pi$, which is unknown and needs to be estimated.
+However, note that this is not feasible since it requires the true state value $$v_\pi$$, which is unknown and needs to be estimated.
 
 ## Monte Carlo and TD with Function Approximation
 
-We can replace $v_\pi(s_t)$ with an approximation:
+We can replace $$v_\pi(s_t)$$ with an approximation:
 
 1. First, Monte Carlo learning with function approximation  
-   We can use the discounted return $g_t$ to approximate $v_\pi(s_t)$, and the algorithm becomes  
-   $w_{t+1} = w_{t} + \alpha_{t}\left( g_t - \hat{v}(s_t,w_t) \right) \nabla_w \hat{v}(s_t,w_t)$
+   We can use the discounted return $$g_t$$ to approximate $$v_\pi(s_t)$$, and the algorithm becomes  
+   $$w_{t+1} = w_{t} + \alpha_{t}\left( g_t - \hat{v}(s_t,w_t) \right) \nabla_w \hat{v}(s_t,w_t)$$
 
 2. Second, TD learning with function approximation  
-   We can use the TD target $r_{t+1}+\gamma \hat{v}(s_{t+1},w_t)$ to approximate $v_\pi(s_t)$, and the algorithm becomes  
-   $w_{t+1} = w_{t} + \alpha_{t}\left( r_{t+1}+\gamma \hat{v}(s_{t+1},w_t) - \hat{v}(s_t,w_t) \right) \nabla_w \hat{v}(s_t,w_t)$  
+   We can use the TD target $$r_{t+1}+\gamma \hat{v}(s_{t+1},w_t)$$ to approximate $$v_\pi(s_t)$$, and the algorithm becomes  
+   $$w_{t+1} = w_{t} + \alpha_{t}\left( r_{t+1}+\gamma \hat{v}(s_{t+1},w_t) - \hat{v}(s_t,w_t) \right) \nabla_w \hat{v}(s_t,w_t)$$  
 
 The second approach is more preferable.
 
@@ -84,9 +84,9 @@ $$
 J(w)=\mathbb{E}_{}\left[ \left( R + \gamma \max_{a\in A(S')} \hat{q}(S',a,w) - \hat{q}(S,A,w) \right)^2 \right]
 $$
 
-where $(S,A,R,S’)$ are random variables. Unlike the former $J(w)$ where $S \sim d_\pi$, in the latter $J(w)$ we do not know any prior regarding $(S,A,R,S’)$. Therefore, we assume a uniform distribution and use an **experience replay buffer** to approximate this condition.
+where $$(S,A,R,S’)$$ are random variables. Unlike the former $$J(w)$$ where $$S \sim d_\pi$$, in the latter $$J(w)$$ we do not know any prior regarding $$(S,A,R,S’)$$. Therefore, we assume a uniform distribution and use an **experience replay buffer** to approximate this condition.
 
-However, the objective function of Deep Q-learning is somewhat tricky, since the parameter $w$ appears not only in $\hat{q}(S,A,w)$ but also in
+However, the objective function of Deep Q-learning is somewhat tricky, since the parameter $$w$$ appears not only in $$\hat{q}(S,A,w)$$ but also in
 
 $$
 y = R + \gamma \max_{a\in A(S')} \hat{q}(S',a,w)
@@ -94,8 +94,8 @@ $$
 
 To address this issue, two neural networks are introduced:
 
-- One is a main network representing $\hat{q}(s,a,w)$
-- The other is a target network $\hat{q}(s,a,w_T)$
+- One is a main network representing $$\hat{q}(s,a,w)$$
+- The other is a target network $$\hat{q}(s,a,w_T)$$
 
 The objective function in this case becomes:
 
@@ -103,9 +103,9 @@ $$
 J=\mathbb{E}_{}\left[ \left( R + \gamma \max_{a\in A(S')} \hat{q}(S',a,w_T) - \hat{q}(S,A,w) \right)^2 \right]
 $$
 
-where $w_T$ is the target network parameter and $w$ is the main network parameter.
+where $$w_T$$ is the target network parameter and $$w$$ is the main network parameter.
 
-When $w_T$ is fixed, we can compute the gradient of $J$ with respect to parameter $w$ as:
+When $$w_T$$ is fixed, we can compute the gradient of $$J$$ with respect to parameter $$w$$ as:
 
 $$
 \nabla_w J=\mathbb{E}_{}\left[ \left( R + \gamma \max_{a\in A(S')} \hat{q}(S',a,w_T) - \hat{q}(S,A,w) \right) \nabla_w \hat{q}(S,A,w) \right]
